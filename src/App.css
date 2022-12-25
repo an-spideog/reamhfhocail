@@ -25,14 +25,13 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ff33db;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table, th, td {
+	border:1px solid black;
+}
+
+table {
+	width:100%;
 }

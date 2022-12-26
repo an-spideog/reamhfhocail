@@ -1,12 +1,15 @@
 import './App.css';
 import React from 'react';
 import { useState } from 'react';
+import { standardForms, munsterForms, connachtForms, ulsterForms } from './forms.js' 
 
 function App() {
 	return (
 		<div className="App">
 			<h2> Title </h2>
-			<p> Description </p>
+			<div className="Description"> 
+				<p>The various dialectal forms of prepositions in irish.</p>
+			</div>
 			<TableWithOptions />
 			<p> Notes. </p>
 
@@ -16,62 +19,71 @@ function App() {
 
 
 function TableWithOptions() {
-	const [standard, setStandard] = useState(true);
-	const [munster, setMunster] = useState(false);
-	const [connacht, setConnacht] = useState(false);
-	const [ulster, setUlster] = useState(false);
+	const [enabledDialects, setEnabledDialects] = useState({
+		isStandardOn: true,
+		isMunsterOn: false,
+		isConnachtOn: false,
+		isUlsterOn: false
+	});
+	const [isCelticistOn, setIsCelticistOn] = useState(false);
 
-	function toggleStandard() {
-		setStandard(!standard);
+	function handleToggleDialect(dialect) {
+		setEnabledDialects({
+			...enabledDialects,
+			[dialect]: !enabledDialects[dialect]
+		});
 	}
-	function toggleMunster() {
-		setMunster(!munster);
-	}
-	function toggleConnacht() {
-		setConnacht(!connacht);
-	}
-	function toggleUlster() {
-		setUlster(!ulster);
+
+	function handleToggleCelticist() {
+		setIsCelticistOn(!isCelticistOn);
 	}
 
 	return (
 		<div className="TableWithOptions">
-			<Options standard={standard} toggleStandard={toggleStandard}
-					 munster={munster}   toggleMunster={toggleMunster}
-					 connacht={connacht} toggleConnacht={toggleConnacht}
-					 ulster={ulster}     toggleUlster={toggleUlster}
+			<Options enabledDialects={enabledDialects} 
+			         toggleDialect={handleToggleDialect}
+				     isCelticistOn={isCelticistOn}
+				     handleToggleCelticist={handleToggleCelticist}
 			/>
-			<Table standard={standard}
-				   munster={munster}
-				   connacht={connacht}
-			       ulster={ulster}
-			/>
+			<Table enabledDialects={enabledDialects}
+				   isCelticistOn={isCelticistOn}/>
 		</div>
 	);
 }
 
 
-function Options({standard, toggleStandard, munster, toggleMunster, connacht, toggleConnacht, ulster, toggleUlster}) {
+function Options({enabledDialects, toggleDialect, isCelticistOn, handleToggleCelticist}) {
 	return (
 		<div>
-			<button onClick={toggleStandard}>
-				Standard:{standard ? "ON" : "OFF"}
+			<button className="standard" onClick={() => toggleDialect("isStandardOn")}>
+				Standard:{enabledDialects.isStandardOn ? "ON" : "OFF"}
 			</button>
-			<button onClick={toggleMunster}>
-				Munster:{munster ? "ON" : "OFF"}
-			</button>		
-			<button onClick={toggleConnacht}>
-				Connacht:{connacht ? "ON" : "OFF"}
-			</button>		
-			<button onClick={toggleUlster}>
-				Ulster:{ulster ? "ON" : "OFF"}
+			<button className="munster" onClick={() => toggleDialect("isMunsterOn")}>
+				Munster:{enabledDialects.isMunsterOn ? "ON" : "OFF"}
+			</button>
+			<button className="connacht" onClick={() => toggleDialect("isConnachtOn")}>
+				Connacht:{enabledDialects.isConnachtOn ? "ON" : "OFF"}
+			</button>
+			<button className="ulster" onClick={() => toggleDialect("isUlsterOn")}>
+				Ulster:{enabledDialects.isUlsterOn ? "ON" : "OFF"}
+			</button>
+			<button className="celticist" onClick={handleToggleCelticist}>
+				Showing Celticist Transcriptions: {isCelticistOn ? "true" : "false"}
 			</button>
 		</div>
 	);
 }
 
 
-function Table({standard, munster, connacht, ulster}) {
+function Table({enabledDialects, isCelticistOn}) {
+	const prepositions = ["ag", "ar", "as", "chuig", "de", "do", "fara", "faoi", "i", "idir", "le", "ó", "roimh", "trí", "thar", "um"];
+	const rows = prepositions.map(preposition => 
+		<Row preposition={preposition}
+		     enabledDialects={enabledDialects}
+		     isCelticistOn={isCelticistOn} 
+		/>
+	);
+
 	return (
 		<table>
 			<tr>
@@ -83,8 +95,11 @@ function Table({standard, munster, connacht, ulster}) {
 				<td>First Person Plural</td>
 				<td>Second Person Plural</td>
 				<td>Third Person Plural</td>
+				<td>With the article 'an'</td>
+				<td>With the article 'na'</td>
+				<td>With 'a'</td>
 			</tr>
-			<Row preposition="ag" standard={standard} munster={munster} connacht={connacht} ulster={ulster}/>
+			{rows}
 		</table>
 	);
 }
@@ -92,62 +107,49 @@ function Table({standard, munster, connacht, ulster}) {
 
 /* Row() will be given a preposition and the dialects desired and it
  * will return a div with the relevant content */
-function Row({preposition, standard, munster, connacht, ulster}) {  
-	const indices = [0, 1, 2, 3, 4, 5, 6];
+function Row({preposition, enabledDialects, isCelticistOn}) {  
+	const indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	const cells = indices.map( (index) =>
-		<Cell standard={standard} index={index} preposition={preposition} munster={munster} connacht={connacht} ulster={ulster}/>
+		<Cell index={index} 
+		      preposition={preposition} 
+		      enabledDialects={enabledDialects}
+			  isCelticistOn={isCelticistOn}
+		/>
 	);
 	return (
 		<tr>
-			<td> {preposition} </td>
 			{cells}
 		</tr>
 	);
 }
 
-function Cell( {index, preposition, standard, munster, connacht, ulster} ) {
-	const standardList = {
-		ag: ["agam", "agat", "aige", "aici", "againn", "agaibh", "acu"],
-		ar: ["orm", "ort", "air", "uirthi", "orainn", "oraibh", "orthu"]
-	};
-
-	const connachtList = {
-		ag: ["agam", "agat", "aige", "aici", "againn", "agaibh", "acu"],
-		ar: ["orm", "ort", "air", "uirthi", "orainn", "oraibh", "orthu"]
-	};
-
-	const ulsterList = {
-		ag: ["agam", "agat", "aige", "aici", "againn", "agaibh", "acu"],
-		ar: ["orm", "ort", "air", "uirthi", "orainn", "oraibh", "orthu"]
-	};
-
-	const munsterList = {
-		ag: ["agum", "agut", "aige", "aici", "aguinn", "aguibh", "acu"],
-		ar: ["orm", "ort", "air", "uirthi", "orainn", "oraibh", "orthu"]
-	};
-
+function Cell({ index, preposition, enabledDialects, isCelticistOn }) {
+	console.log(preposition);
 	return (
 		<td> 
-			{standard &&
+			{enabledDialects.isStandardOn ? (
 				<div className="standard"> 
-					{standardList[preposition][index]}
+					{standardForms[preposition].writtenForms[index]}
 				</div>
-			}
-			{munster &&
+			) : null}
+			{enabledDialects.isMunsterOn ? ( 
 				<div className="munster"> 
-					{munsterList[preposition][index]}
+					{munsterForms[preposition].writtenForms[index]}
+					{isCelticistOn ? " /" + munsterForms[preposition].celticistForms[index] + "/": null}
 				</div>
-			}
-			{connacht &&
+			) : null}
+			{enabledDialects.isConnachtOn ? (
 				<div className="connacht"> 
-					{connachtList[preposition][index]}
+					{connachtForms[preposition].writtenForms[index]}
+					{isCelticistOn ? " /" + connachtForms[preposition].celticistForms[index] + "/": null}
 				</div>
-			}
-			{ulster &&
+			): null}
+			{enabledDialects.isUlsterOn ? (
 				<div className="ulster"> 
-					{ulsterList[preposition][index]}
+					{ulsterForms[preposition].writtenForms[index]}
+					{isCelticistOn ? " /" + ulsterForms[preposition].celticistForms[index] + "/" : null}
 				</div>
-			}
+			) : null}
 		</td>
 	);
 }

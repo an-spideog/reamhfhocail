@@ -35,3 +35,15 @@ table, th, td {
 table {
 	width:100%;
 }
+
+.munster {
+	color: green;
+}
+
+.connacht {
+	color: blue;
+}
+
+.ulster {
+	color: red;
+}

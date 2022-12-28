@@ -27,7 +27,7 @@ export const standardForms = {
 			"orthu", 
 			"ar an", 
 			"ar na", 
-			"ag a"
+			"ar a"
 		]
 	},
 	as: {
@@ -217,7 +217,7 @@ export const standardForms = {
 			"tharam",
 			"tharat",
 			"thairis",
-			"thairti",
+			"thairsti",
 			"tharainn",
 			"tharaibh",
 			"thartu",
@@ -246,7 +246,7 @@ export const standardForms = {
 export const munsterForms = {
 	ag: {
 		writtenForms: [
-			"ag", 
+			"aige", 
 			"agam", 
 			"agat", 
 			"aige", 
@@ -254,10 +254,23 @@ export const munsterForms = {
 			"againn", 
 			"agaibh", 
 			"acu", 
-			"ag an",
-			"ag na", 
-			"ag a"
+			"aigen",
+			"aigesna", 
+			"aigena"
 		],
+		celticistForms: [
+			"əg´e",
+			"ə'gum", 
+			"ə'gut",
+			"ə'g´e",
+			"ə'k´i",
+			"ə'gin´",
+			"ə'giv´",
+			"ə'ku",
+			"əg´en",
+			"əg´esnə",
+			"əg´enə"
+		]
 
 	}, 
 	ar: {
@@ -272,7 +285,20 @@ export const munsterForms = {
 			"orthu", 
 			"ar an", 
 			"ar na", 
-			"ag a"
+			"ar a"
+		],
+		celticistForms: [
+			"er´",
+			"ə'rum",  // de réir GCD, tá an leagan so ann agus é coitianta
+			"ort",
+			"er´",
+			"er´hi",
+			"orən´",
+			"orəv´",
+			"orhə",
+			"er´ ə(n)",
+			"er nə",
+			"ər´ ə",
 		]
 	},
 	as: {
@@ -289,11 +315,24 @@ export const munsterForms = {
 			"as an",
 			"as na",
 			"as a"
-		]
+		],
+		celticistForms: [
+			"as",
+			"asəm",
+			"asət",
+			"as",
+			"as´t´ə",
+			"asən´",
+			"asəv´",
+			"astə",
+			"as ə(n)",
+			"as nə",
+			"as ə"
+		],
 	},
 	chuig: {
-		writtenForms: [
-			"chuig", 
+		writtenForms: [  // Seo hiad na foirmeacha atá i nGCD, ach ní
+			"chun",      // thaispeánann siad an fhoghraíocht i n-aon chor 
 			"chugam",
 			"chugat",
 			"chuige",
@@ -301,13 +340,26 @@ export const munsterForms = {
 			"chugainn",
 			"chugaibh",
 			"chucu",
-			"chuig an",
-			"chuig na",
-			"chuig a"
+			"chun an",
+			"chun na",
+			"chun a"
+		],
+		celticistForms: [
+			"xin´",
+			"xu:m",
+			"xu:t",
+			"xig´ə",
+			"xu:h´ə",
+			"xu:n´",
+			"xu:v´",
+			"xu:hə",
+			"xin´ ə(n)",
+			"xu nə",
+			"xin´ ə"
 		]
 	},
 	de: {
-		writtenForms: [
+		writtenForms: [  // Ar chóir dom iad so a dh'idirdhealú i n-aon chor?
 			"de",
 			"díom",
 			"díot",
@@ -317,8 +369,21 @@ export const munsterForms = {
 			"díbh",
 			"díobh",
 			"den",
-			"de na",
-			"dá"
+			"desna",
+			"dena"
+		],
+		celticistForms: [
+			"də",
+			"d´i:m",
+			"d´i:t",
+			"do",
+			"d´i",
+			"d´i:n´",
+			"d´i:v´",
+			"d´i:v",
+			"dən",
+			"dəsna",
+			"donə",
 		]
 	},
 	do: {
@@ -326,44 +391,83 @@ export const munsterForms = {
 			"do",
 			"dom",
 			"duit",
-			"dó",
+			"do",
 			"di",
 			"dúinn",
 			"daoibh",
 			"dóibh",
 			"don",
-			"do na",
-			"dá"
-		]
+			"dosna",
+			"dona"
+		],
+		celticistForms: [
+			"də",
+			"dom",
+			"dit´",
+			"do",
+			"d´i",
+			"du:n´",
+			"d´i:v´",
+			"do:v´",
+			"dən",
+			"dəsnə",
+			"donə"
+		],
 	},
 	fara: {
 		writtenForms: [
 			"fara",
 			"faram",
 			"farat",
-			"fairis",
-			"farae",
+			"farais",
+			"fairithi",
 			"farainn",
 			"faraibh",
-			"faru",
+			"farathu",
 			"fairis an",
 			"fairis na",
 			"farana"
+		],
+		celticistForms: [
+			"farə",
+			"farəm",
+			"farət",
+			"farəs´",
+			"far´əh´ə",
+			"farən´",
+			"farəv´",
+			"farəhə",
+			"far´əs´ ə(n)",
+			"far´əs´ nə",
+			"farənə"
 		]
 	},
 	faoi: {
 		writtenForms: [
-			"faoi",
+			"fé",
 			"fúm",
 			"fút",
-			"faoi",
+			"fé",
 			"fúithi",
 			"fúinn",
 			"fúibh",
 			"fúthu",
-			"faoin",
-			"faoi na",
-			"faoina"
+			"fén",
+			"fésna",
+			"féna"
+		],
+		celticistForms: [
+			"f´e:",
+			"fu:m",
+			"fu:t",
+			"f'e:",
+			"fu:h´ə",
+			"fu:n´",
+			"fu:v´",
+			"fu:hə",
+			"f´e:n",
+			"f´e:snə",
+			"f´e:nə"
 		]
 	},
 	i: {
@@ -377,8 +481,20 @@ export const munsterForms = {
 			"ionaibh",
 			"iontu",
 			"sa",
-			"sna",
+			"sa",
 			"ina"
+		],
+		celticistForms: [
+			"ənum",
+			"ənut",
+			"aun",
+			"i:n´t´ə",
+			"ənin´",
+			"əniv´",
+			"u:ntə",
+			"sə",
+			"sə",
+			"ənə"
 		]
 	},
 	idir: {
@@ -388,12 +504,24 @@ export const munsterForms = {
 			"-",
 			"-",
 			"-",
-			"eadrainn",
-			"eadraibh",
+			"eatrainn",
+			"eatraibh",
 			"eatarthu",
 			"idir an",
 			"idir na",
 			"idir a"
+		],
+		celticistForms: [
+			"ə'd´er´",
+			"",
+			"",
+			"",
+			"",
+			"atərən´",
+			"atərəv´",
+			"atərhə",
+			"ə'd´er´ ə(n)",
+			"ə'd´er´ na"
 		]
 	},
 	le: {
@@ -405,41 +533,80 @@ export const munsterForms = {
 			"léi",
 			"linn",
 			"libh",
-			"leo",
+			"leothu",
 			"leis an",
 			"leis na",
 			"lena"
-		]
+		],
+		celticistForms: [
+			"l´e",
+			"l´um",
+			"l´at",
+			"l´es´",
+			"l´e:",
+			"l´in´",
+			"l´iv´",
+			"l´o:hə",
+			"l´es´ ə(n)",
+			"l´es´ nə",
+			"l´enə"
+		] 
 	},
 	ó: {
 		writtenForms: [
 			"ó",
-			"uaim",
-			"uait",
-			"uaidh",
-			"uaithi",
-			"uainn",
-			"uaibh",
-			"uathu",
+			"bhuam",
+			"bhuait",
+			"bhuaidh",
+			"bhuaithi",
+			"bhuainn",
+			"bhuaibh",
+			"bhuathu",
 			"ón",
-			"ó na",
+			"ósna",
 			"óna"
+		],
+		celticistForms: [
+			"o:",
+			"vuam",
+			"bhuat´",
+			"bhuag´",
+			"bhuah´ə",
+			"bhuan´",
+			"bhuav´",
+			"bhuahə",
+			"o:n",
+			"o:snə",
+			"o:nə"
 		]
 	},
 	roimh: {
 		writtenForms: [
-			"roimh",
+			"roim",
 			"romham",
 			"romhat",
-			"roimhe",
+			"roimis",
 			"roimpi",
 			"romhainn",
 			"romhaibh",
 			"rompu",
-			"roimh an",
-			"roimh na",
-			"roimh a"
-		]
+			"roimis an",
+			"roimis na",
+			"roim na"
+		],
+		celticistForms: [
+			"rim´",
+			"ro:m",
+			"ro:t",
+			"rim´is´",
+			"ri:mp´ə",
+			"ro:n´",
+			"ro:v´",
+			"ro:mpə",
+			"rim´əs´ ə(n)",
+			"rim´əs´ nə",
+			"rim´ nə"
+		],
 	},
 	trí: {
 		writtenForms: [
@@ -451,9 +618,21 @@ export const munsterForms = {
 			"trínn",
 			"tríbh",
 			"tríothu",
-			"tríd an",
-			"trí na",
+			"trís an",
+			"trísna",
 			"trína"
+		],
+		celticistForms: [
+			"t´r´i:",
+			"t´r´i:m",
+			"t´r´i:d´",
+			"t´r´i:h´ə",
+			"t´r´i:n´",
+			"t´r´i:v´",
+			"t´r´i:hə",
+			"t´r´i:s´ ə(n)",
+			"t´r´i:snə",
+			"t´r´inə"
 		]
 	},
 	thar: {
@@ -462,18 +641,31 @@ export const munsterForms = {
 			"tharam",
 			"tharat",
 			"thairis",
-			"thairti",
+			"thairithi",
 			"tharainn",
 			"tharaibh",
-			"thartu",
-			"thar an",
-			"thar na",
-			"thar a"
+			"tharathu",
+			"thairis an",
+			"thairis na",
+			"tharana"
+		],
+		celticistForms: [
+			"har",
+			"harəm",
+			"harət",
+			"har´əs´",
+			"har´əs´",
+			"har´əh´ə",
+			"harən´",
+			"harəv´",
+			"har´əs´ ə(n)",
+			"har´əs´ nə",
+			"harənə"
 		]
 	},
 	um: {
 		writtenForms: [
-			"um",
+			"uim",
 			"umam",
 			"umat",
 			"uime",
@@ -481,29 +673,55 @@ export const munsterForms = {
 			"umainn",
 			"umaibh",
 			"umpu",
-			"um an",
-			"um na",
-			"um a"
+			"uim an",
+			"uim na",
+			"uim a"
+		],
+		celticistForms: [
+			"im´",
+			"uməm",
+			"umət",
+			"im´ə",
+			"i:m´p´ə",
+			"umən´",
+			"uməv´",
+			"u:mpə",
+			"im´ ə(n)",
+			"im´ nə",
+			"im´ ə"
 		]
 	}
 };
 
+/* Basing these primarily off Ó Siadhail's Learning Irish */
 export const connachtForms = {
 	ag: {
 		writtenForms: [
 			"ag", 
-			"agam", 
-			"agat", 
+			"'am", 
+			"'ad", 
 			"aige", 
 			"aici", 
-			"againn", 
-			"agaibh", 
-			"acu", 
+			"'ainn", 
+			"agaí", 
+			"acub", 
 			"ag an",
 			"ag na", 
 			"ag a"
 		],
-
+		celticistForms: [
+			"eg´",
+			"a:m",
+			"a:d",
+			"eg´ə",
+			"ek´ə",
+			"a:N´",
+			"a:gi:",
+			"a:kəb",
+			"eg´ ə(n)",
+			"eg´ nə",
+			"eg´ ə"
+		]
 	}, 
 	ar: {
 		writtenForms: [
@@ -513,14 +731,26 @@ export const connachtForms = {
 			"air", 
 			"uirthi", 
 			"orainn", 
-			"oraibh", 
-			"orthu", 
+			"oraí", 
+			"orthub", 
 			"ar an", 
 			"ar na", 
 			"ag a"
+		],
+		celticistForms: [
+			"er´",
+			"orəm",
+			"ort",
+			"er´",
+			"orə",
+			"orəN´",
+			"ori:",
+			"orəb",
+			"er´ ə(n)", 
+			"er nə", 
+			"er´ ə"
 		]
-	},
-	as: {
+	}, as: {
 		writtenForms: [
 			"as",
 			"asam",
@@ -529,11 +759,24 @@ export const connachtForms = {
 			"as",
 			"aisti",
 			"asainn",
-			"asaibh",
-			"astu",
+			"asaí",
+			"astub",
 			"as an",
 			"as na",
 			"as a"
+		],
+		celticistForms: [
+			"as",
+			"asəm",
+			"asət",
+			"as",
+			"as´t´ə",
+			"asəN´",
+			"asi:",
+			"astəb",
+			"as ə(n)",
+			"as nə",
+			"as ə",
 		]
 	},
 	chuig: {
@@ -549,51 +792,103 @@ export const connachtForms = {
 			"chuig an",
 			"chuig na",
 			"chuig a"
+		],
+		celticistForms: [
+			"heg´",
+			"hugəm",
+			"hugət",
+			"heg´ə",
+			"hek´ə",
+			"hugiN´",
+			"hugi:",
+			"hucəb",
+			"heg´",
+			"heg´ nə",
+			"heg´ ə",
 		]
 	},
 	de: {
 		writtenForms: [
 			"de",
-			"díom",
-			"díot",
-			"de",
-			"di",
-			"dínn",
-			"díbh",
-			"díobh",
+			"dhíom",
+			"dhíot",
+			"dhe",
+			"dhi",
+			"dhínn",
+			"dhíb",
+			"dhíob",
 			"den",
 			"de na",
-			"dá"
+			"dhá"
+		],
+		celticistForms: [
+			"gə",
+			"ɣ´i:m",
+			"ɣ´i:t",
+			"ɣ´e",
+			"ɣ´i",
+			"ɣ´i:N´",
+			"ɣ´ib´",
+			"ɣ´i:b",
+			"gən",
+			"gə nə",
+			"ɣa:"
 		]
 	},
 	do: {
 		writtenForms: [
 			"do",
-			"dom",
-			"duit",
-			"dó",
-			"di",
-			"dúinn",
-			"daoibh",
-			"dóibh",
+			"dhom",
+			"dhuit",
+			"dhó",
+			"dhi",
+			"dhúinn",
+			"dhaoib",
+			"dhóib",
 			"don",
 			"do na",
-			"dá"
+			"dhá"
+		],
+		celticistForms: [
+			"gə",
+			"ɣum",
+			"ɣit´",
+			"ɣo:",
+			"ɣu:N´",
+			"ɣi:b´",
+			"ɣo:b´",
+			"gən",
+			"gə nə",
+			"ɣa:"
 		]
+
 	},
-	fara: {
+	fara: {  // as "Gaeilge Chois Fhairrge - An Deilbhíocht" do so
 		writtenForms: [
-			"fara",
-			"faram",
-			"farat",
-			"fairis",
-			"farae",
-			"farainn",
-			"faraibh",
-			"faru",
-			"fairis an",
-			"fairis na",
-			"farana"
+			"frae",
+			"frum",
+			"fra:t",  // ar cheart do so bheith fada?
+			"frois",
+			"frae",
+			"fruinn",
+			"fraoib",
+			"frób",
+			"frois an",  // ní fheadar dáiríribh
+			"frois na",
+			"fraena"
+		],
+		celticistForms: [
+			"fre:",
+			"frum",
+			"frat",
+			"fres´",
+			"fre:",
+			"friN´",
+			"fri:b´",
+			"fro:b",
+			"fres´ ə(n)",
+			"fres´ nə",
+			"fre: nə"
 		]
 	},
 	faoi: {
@@ -604,11 +899,24 @@ export const connachtForms = {
 			"faoi",
 			"fúithi",
 			"fúinn",
-			"fúibh",
-			"fúthu",
+			"fúib",
+			"fúthub",
 			"faoin",
 			"faoi na",
 			"faoina"
+		],
+		celticistForms: [
+			"fi:",
+			"fu:m",
+			"fu:t",
+			"fi:",
+			"fu:",
+			"fu:N´",
+			"fu:b´",
+			"fu:b",
+			"fi:n",
+			"fi: nə",
+			"fi:nə",
 		]
 	},
 	i: {
@@ -624,6 +932,19 @@ export const connachtForms = {
 			"sa",
 			"sna",
 			"ina"
+		],
+		celticistForms: [
+			"ə",
+			"uNəm",
+			"uNəd",
+			"a:N",
+			"i:N´t´ə",
+			"uNəN´",
+			"uNi:",
+			"uNtəb",
+			"sə",
+			"sNə",
+			"ənə"
 		]
 	},
 	idir: {
@@ -635,10 +956,23 @@ export const connachtForms = {
 			"-",
 			"eadrainn",
 			"eadraibh",
-			"eatarthu",
+			"eatarthub",
 			"idir an",
 			"idir na",
 			"idir a"
+		],
+		celticistForms: [
+			"ed´ər´",
+			"",
+			"",
+			"",
+			"",
+			"a:trəN´",
+			"a:tri:",
+			"a:trəb",
+			"ed´ər´ an",
+			"ed´ər na",
+			"ed´ər´ ə"
 		]
 	},
 	le: {
@@ -650,10 +984,23 @@ export const connachtForms = {
 			"léi",
 			"linn",
 			"libh",
-			"leo",
+			"leob",
 			"leis an",
 			"leis na",
 			"lena"
+		],
+		celticistForms: [
+			"l´e",
+			"l´um",
+			"l´a:t",
+			"l´es´",
+			"l´e:",
+			"l´iN´",
+			"l´ib´",
+			"l´o:b",
+			"l´es´ ə(n)",
+			"l´es´ nə",
+			"l´enə"
 		]
 	},
 	ó: {
@@ -664,11 +1011,23 @@ export const connachtForms = {
 			"uaidh",
 			"uaithi",
 			"uainn",
-			"uaibh",
-			"uathu",
+			"uaib",
+			"uathub",
 			"ón",
 			"ó na",
 			"óna"
+		],
+		celticistForms: [
+			"o:",
+			"wem´",
+			"wet´",
+			"wai",
+			"wo:",
+			"weN´",
+			"web´",
+			"o:n",
+			"o: nə",
+			"o:nə"
 		]
 	},
 	roimh: {
@@ -679,26 +1038,49 @@ export const connachtForms = {
 			"roimhe",
 			"roimpi",
 			"romhainn",
-			"romhaibh",
-			"rompu",
+			"romhaib",
+			"rompub",
 			"roimh an",
 			"roimh na",
 			"roimh a"
+		],
+		celticistForms: [
+			"riv´",
+			"ru:m",
+			"ru:t",
+			"riv´ə",
+			"ri:m´p´ə",
+			"ru:N´",
+			"ru:b´",
+			"ru:mpəb",
 		]
 	},
 	trí: {
 		writtenForms: [
-			"trí",
-			"tríom",
-			"tríot",
-			"tríd",
-			"tríthi",
-			"trínn",
-			"tríbh",
-			"tríothu",
-			"tríd an",
-			"trí na",
-			"trína"
+			"thrí",
+			"thríom",
+			"thrít",
+			"thríd",
+			"thríthi",
+			"thrínn",
+			"thríb",
+			"thríothub",
+			"thríd an",
+			"thrí na",
+			"thrína"
+		],
+		celticistForms: [
+			"hri:",
+			"hri:m",
+			"hri:t´",
+			"hri:d´",
+			"hri:",
+			"hri:N´",
+			"hri:b´",
+			"hri:b",
+			"hri:d´ ə(n)",
+			"hri: nə",
+			"hri:nə"
 		]
 	},
 	thar: {
@@ -709,26 +1091,53 @@ export const connachtForms = {
 			"thairis",
 			"thairti",
 			"tharainn",
-			"tharaibh",
-			"thartu",
+			"tharaí",
+			"thartub",
 			"thar an",
 			"thar na",
 			"thar a"
+		],
+		celticistForms: [
+			"ha:r",
+			"ha:rəm",
+			"ha:rət",
+			"ha:r´əs´",
+			"ha:rt´ə",
+			"ha:rəN´",
+			"ha:rəV´",
+			"ha:rtəb",
+			"ha:r ə(n)",
+			"ha:r nə",
+			"ha:r ə"
 		]
 	},
 	um: {
 		writtenForms: [
-			"um",
-			"umam",
-			"umat",
-			"uime",
-			"uimpi",
-			"umainn",
-			"umaibh",
-			"umpu",
-			"um an",
-			"um na",
-			"um a"
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+		],
+		celticistForms: [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
 		]
 	}
 };
@@ -738,7 +1147,7 @@ export const ulsterForms = {
 		writtenForms: [
 			"ag", 
 			"agam", 
-			"agat", 
+			"agad", 
 			"aige", 
 			"aici", 
 			"againn", 
@@ -748,6 +1157,19 @@ export const ulsterForms = {
 			"ag na", 
 			"ag a"
 		],
+		celticistForms: [  // ???
+			"eg´",
+			"agəm",
+			"agəd",
+			"eg´ə",
+			"ek´i",
+			"agiN´",
+			"agiv´",
+			"aku",
+			"eg´ ə(n)",
+			"eg´ nə",
+			"eg´ ə"
+		]
 
 	}, 
 	ar: {
@@ -763,13 +1185,26 @@ export const ulsterForms = {
 			"ar an", 
 			"ar na", 
 			"ag a"
+		],
+		celticistForms: [
+			"er´",
+			"arəm",
+			"art",
+			"er´",
+			"arhi",
+			"ariN´",
+			"ariv´",
+			"arhu",
+			"er´ ə(n)",
+			"er nə",
+			"er´ ə"
 		]
 	},
 	as: {
 		writtenForms: [
 			"as",
 			"asam",
-			"asat",
+			"asad",
 			"asat",
 			"as",
 			"aisti",
@@ -779,6 +1214,19 @@ export const ulsterForms = {
 			"as an",
 			"as na",
 			"as a"
+		],
+		celticistForms: [
+			"is",
+			"isəm",
+			"isəd",
+			"is",
+			"is´t´i",
+			"isəN´",
+			"isəv´",
+			"istu",
+			"is ə(n)",
+			"is nə",
+			"isə"
 		]
 	},
 	chuig: {
@@ -794,66 +1242,131 @@ export const ulsterForms = {
 			"chuig an",
 			"chuig na",
 			"chuig a"
+		],
+		celticistForms: [
+			"eg´",
+			"hogəm",
+			"hogəd",
+			"heg´ə",
+			"hek´i",
+			"hogəN´",
+			"hogəv´",
+			"hoku",
+			"eg´ ə(n)",
+			"eg´ nə",
+			"eg´ ə"
 		]
 	},
 	de: {
 		writtenForms: [
 			"de",
-			"díom",
-			"díot",
-			"de",
-			"di",
-			"dínn",
-			"díbh",
-			"díobh",
+			"dom",
+			"duid",
+			"dó",
+			"daoithe",
+			"dúinn",
+			"daoibh",
+			"daobhtha",
 			"den",
 			"de na",
 			"dá"
+		],
+		celticistForms: [
+			"də",
+			"dom",
+			"did´",
+			"dɔ:",
+			"dihi",
+			"du:N´",
+			"div´",
+			"di:fə",
+			"dən",
+			"də nə",
+			"da:"
 		]
 	},
 	do: {
 		writtenForms: [
 			"do",
 			"dom",
-			"duit",
+			"duid",
 			"dó",
-			"di",
+			"daoithe",
 			"dúinn",
 			"daoibh",
-			"dóibh",
+			"daobhtha",
 			"don",
 			"do na",
 			"dá"
+		],
+		celticistForms: [
+			"də",
+			"dom",
+			"did´",
+			"dɔ:",
+			"dihi",
+			"du:N´",
+			"div´",
+			"di:fə",
+			"dən",
+			"də nə",
+			"da:"
 		]
 	},
 	fara: {
 		writtenForms: [
-			"fara",
-			"faram",
-			"farat",
-			"fairis",
-			"farae",
-			"farainn",
-			"faraibh",
-			"faru",
-			"fairis an",
-			"fairis na",
-			"farana"
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-"
+		],
+		celticistForms: [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
 		]
 	},
 	faoi: {
 		writtenForms: [
 			"faoi",
 			"fúm",
-			"fút",
+			"fúd",
 			"faoi",
-			"fúithi",
+			"faoithe",
 			"fúinn",
 			"fúibh",
 			"fúthu",
 			"faoin",
 			"faoi na",
 			"faoina"
+		],
+		celticistForms: [
+			"fi:",
+			"fu:M",
+			"fu:d",
+			"fi:",
+			"fihi",
+			"fu:N´",
+			"fu:v´",
+			"fuhu",
+			"fi:n",
+			"fi: nə",
+			"fi:nə"
 		]
 	},
 	i: {
@@ -866,14 +1379,27 @@ export const ulsterForms = {
 			"ionainn",
 			"ionaibh",
 			"iontu",
-			"sa",
-			"sna",
+			"insa",
+			"insna",
 			"ina"
+		],
+		celticistForms: [
+			"ə",
+			"oNəm",
+			"oNət",
+			"oN",
+			"iN´t´i",
+			"oNəN´",
+			"oNəv´",
+			"oNtu",
+			"ənsə",
+			"ənsnə",
+			"ənə"
 		]
 	},
 	idir: {
 		writtenForms: [
-			"idir",
+			"eadar",
 			"-",
 			"-",
 			"-",
@@ -881,9 +1407,22 @@ export const ulsterForms = {
 			"eadrainn",
 			"eadraibh",
 			"eatarthu",
-			"idir an",
-			"idir na",
-			"idir a"
+			"eadar an",
+			"eadar na",
+			"eadar a"
+		],
+		celticistForms: [
+			"adər",
+			"",
+			"",
+			"",
+			"",
+			"idrəN´",
+			"idrəv´",
+			"idru",
+			"adər ə(n)",
+			"adər nə",
+			"adər ə"
 		]
 	},
 	le: {
@@ -899,13 +1438,26 @@ export const ulsterForms = {
 			"leis an",
 			"leis na",
 			"lena"
+		],
+		celticistForms: [
+			"l´e",
+			"l´om",
+			"l´at",
+			"l´es´",
+			"l´e:hi",
+			"l´iN´",
+			"l´iv´",
+			"l´ɔ",
+			"l´es´ ə(n)",
+			"l´es´ nə",
+			"l´enə"
 		]
 	},
 	ó: {
 		writtenForms: [
 			"ó",
 			"uaim",
-			"uait",
+			"uaid",
 			"uaidh",
 			"uaithi",
 			"uainn",
@@ -914,11 +1466,24 @@ export const ulsterForms = {
 			"ón",
 			"ó na",
 			"óna"
+		],
+		celticistForms: [
+			"o:",
+			"wuəm",
+			"wuəd´",
+			"wuə",
+			"wuəhi",
+			"wu:N´",
+			"wu:v´",
+			"wuəfu",
+			"o:n",
+			"o: nə",
+			"o:nə"
 		]
 	},
 	roimh: {
 		writtenForms: [
-			"roimh",
+			"roimhe",
 			"romham",
 			"romhat",
 			"roimhe",
@@ -929,21 +1494,44 @@ export const ulsterForms = {
 			"roimh an",
 			"roimh na",
 			"roimh a"
+		],
+		celticistForms: [
+			"riv´ə",
+			"ro:m",
+			"ro:d",
+			"riv´ə",
+			"rip´i",
+			"ro:N´",
+			"ro:v´",
+			"ropu"
 		]
 	},
 	trí: {
 		writtenForms: [
-			"trí",
-			"tríom",
-			"tríot",
-			"tríd",
-			"tríthi",
-			"trínn",
-			"tríbh",
-			"tríothu",
-			"tríd an",
-			"trí na",
-			"trína"
+			"frí",
+			"fríom",
+			"fríot",
+			"fríd",
+			"fríthi",
+			"frínn",
+			"fríbh",
+			"fríobhthu",
+			"fríd an",
+			"frí na",
+			"frína"
+		],
+		celticistForms: [  // cad tá ar siúl anso??
+			"f´ri",
+			"f´ri:m",
+			"f´r´i:d",
+			"f´ri:d´",
+			"f´r´i:hə",
+			"f´r´i:N´",
+			"f´r´i:v´",
+			"f´r´i:fu",
+			"f´ri:d´ ə(n)",
+			"f´ri: nə",
+			"f´ri:nə"
 		]
 	},
 	thar: {
@@ -952,28 +1540,54 @@ export const ulsterForms = {
 			"tharam",
 			"tharat",
 			"thairis",
-			"thairti",
+			"thairsti",
 			"tharainn",
 			"tharaibh",
 			"thartu",
 			"thar an",
 			"thar na",
 			"thar a"
+		],
+		celticistForms: [
+			"her´ə",
+			"her´əm",
+			"her´əd",
+			"her´əs´",
+			"hers´t´i",
+			"her´əN´",
+			"her´əv´",
+			"harstu",
+			"her´əs´ ə(n)",
+			"her´əs´ nə",
+			"her´ə"
 		]
 	},
 	um: {
 		writtenForms: [
-			"um",
-			"umam",
-			"umat",
-			"uime",
-			"uimpi",
-			"umainn",
-			"umaibh",
-			"umpu",
-			"um an",
-			"um na",
-			"um a"
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-",
+			"-"
+		],
+		celticistForms: [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
 		]
 	}
 };

@@ -6,7 +6,7 @@ import { standardForms, munsterForms, connachtForms, ulsterForms } from './forms
 function App() {
 	return (
 		<div className="App">
-			<h2> Title </h2>
+			<h2> Na Réamhfhocail </h2>
 			<div className="Description"> 
 				<p>The various dialectal forms of prepositions in Irish. Given both as phonetic spellings and Celticist transcriptions.</p>
 			</div>

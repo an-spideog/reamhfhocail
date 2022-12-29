@@ -117,6 +117,9 @@ function Options({enabledDialects, toggleDialect, isCelticistOn, handleToggleCel
 			<button className="ulster" onClick={() => toggleDialect("isUlsterOn")}>
 				Ulster:{enabledDialects.isUlsterOn ? "ON" : "OFF"}
 			</button>
+			<button onClick={handleToggleCelticist}>
+				Show Celticist Transcriptions: {isCelticistOn ? "TRUE" : "FALSE"}
+			</button>
 		</div>
 	);
 }

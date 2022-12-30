@@ -35,7 +35,6 @@ export const standardForms = {
 			"as",
 			"asam",
 			"asat",
-			"asat",
 			"as",
 			"aisti",
 			"asainn",
@@ -291,7 +290,7 @@ export const munsterForms = {
 	}, 
 	ar: {
 		writtenForms: [
-			"air", 
+			"eir", 
 			"oram", 
 			"ort", 
 			"eir", 
@@ -321,7 +320,6 @@ export const munsterForms = {
 		writtenForms: [
 			"as",
 			"asam",
-			"asat",
 			"asat",
 			"as",
 			"aiste",
@@ -899,6 +897,7 @@ export const connachtForms = {
 			"ɣum",
 			"ɣit´",
 			"ɣo:",
+			"ɣ´i",
 			"ɣu:N´",
 			"ɣi:b´",
 			"ɣo:b´",

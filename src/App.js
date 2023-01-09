@@ -47,7 +47,7 @@ function App() {
 			  */}
 			<p> 
 				Often several variations of a certain form are present within a
-				given dialect, I have tried to pick the one reported as being 
+				 given dialect, I have tried to pick the one reported as being 
 				the most common. If you're interested in a particularly dialect 
 				I'd highly recommend reading one of the relevant sources below 
 				as you'll get a much more thorough overview of the existing 
